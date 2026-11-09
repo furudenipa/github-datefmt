@@ -1,0 +1,12 @@
+{
+  "name": "github-datefmt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension for formatting GitHub dates",
+  "scripts": {
+    "check": "node scripts/check.mjs && node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
