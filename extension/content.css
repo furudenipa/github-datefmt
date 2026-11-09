@@ -1,0 +1,14 @@
+/* 画面のフォントを維持し、数字の幅をそろえる。Shadow DOM にも継承される。 */
+[data-github-datefmt] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ファイル一覧は固定レイアウトで、元の日付列は短い相対表示用。 */
+table[aria-labelledby="folders-and-files"] > thead > tr > th:last-child {
+  width: 11rem !important;
+}
+
+table[aria-labelledby="folders-and-files"] .react-directory-commit-age {
+  width: auto !important;
+  white-space: nowrap;
+}

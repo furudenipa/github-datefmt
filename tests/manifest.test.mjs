@@ -16,12 +16,13 @@ test('拡張機能の対象と権限を限定する', () => {
   assert.equal(manifest.content_scripts[0].world, undefined);
 });
 
-test('Content Script は拡張機能内のファイルを参照する', async () => {
+test('Content Script と CSS は拡張機能内のファイルを参照する', async () => {
   const root = resolve('extension');
-  const scripts = manifest.content_scripts[0].js;
-  assert.ok(Array.isArray(scripts) && scripts.length > 0);
-  for (const script of scripts) {
-    const path = resolve(root, script);
+  const { js, css } = manifest.content_scripts[0];
+  assert.ok(Array.isArray(js) && js.length > 0);
+  assert.ok(Array.isArray(css) && css.length > 0);
+  for (const file of [...js, ...css]) {
+    const path = resolve(root, file);
     assert.ok(path.startsWith(root + sep));
     await access(path);
   }
