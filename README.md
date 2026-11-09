@@ -1,5 +1,7 @@
 # github-datefmt
 
+![リポジトリトップとコミット履歴の日付表示](docs/images/screenshots.svg)
+
 GitHub 上の相対日時・曖昧な日付表記を、わかりやすい絶対的な数値表記（YYYY-MM-DD 等）に変換する Chrome 拡張機能です。
 
 ## 主な機能
